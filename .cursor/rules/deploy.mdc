@@ -1,0 +1,14 @@
+---
+description: Deploy this site by pushing to the main branch
+alwaysApply: true
+---
+
+# Deploy
+
+GitHub Pages serves this static site from the `main` branch, repository root. There is no build step.
+
+When the user asks to deploy, publish, or put the site live:
+
+- Pushing to `main` is the full deploy. Do not change Pages settings, add a CNAME, or run a separate hosting step.
+- If the working tree has site changes that are not committed, commit them as part of that request, then push to `origin main`.
+- Do not force-push.
