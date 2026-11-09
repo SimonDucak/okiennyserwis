@@ -448,39 +448,14 @@ section {
   margin-inline: auto;
 }
 
-.hero-window {
+.hero-photo {
+  display: block;
   width: 100%;
   height: auto;
-}
-
-.hero-chip {
-  position: absolute;
-  left: 4%;
-  bottom: 11%;
-  background: var(--amber);
-  color: var(--navy);
-  border-radius: 16px;
-  padding: 0.85rem 1.05rem 0.75rem;
-  box-shadow: 0 16px 40px rgba(0, 0, 0, 0.22);
-}
-
-.hero-chip span {
-  display: block;
-  font-family: var(--display);
-  font-size: 0.72rem;
-  font-weight: 600;
-  letter-spacing: 0.12em;
-  text-transform: uppercase;
-}
-
-.hero-chip strong {
-  display: block;
-  margin-top: 0.15rem;
-  font-family: var(--display);
-  font-size: 2rem;
-  font-weight: 700;
-  letter-spacing: -0.04em;
-  line-height: 1.05;
+  aspect-ratio: 3 / 4;
+  object-fit: cover;
+  border-radius: 28px;
+  box-shadow: 0 28px 60px rgba(0, 0, 0, 0.35);
 }
 
 .trust {
@@ -584,6 +559,32 @@ section {
   background: var(--navy);
   color: var(--paper);
   border-left-color: var(--amber);
+}
+
+.symptom-tab.with-icon,
+.symptom-panel h3.with-icon {
+  display: flex;
+  align-items: center;
+  gap: 0.65rem;
+}
+
+.fault-mark {
+  flex: none;
+  width: 1.35rem;
+  height: 1.35rem;
+  color: var(--amber-ink);
+}
+
+.symptom-tab[aria-selected="true"] .fault-mark,
+.symptom-panel .fault-mark {
+  width: 2.5rem;
+  height: 2.5rem;
+  color: var(--amber);
+}
+
+.symptom-tab.with-icon .fault-mark {
+  width: 1.45rem;
+  height: 1.45rem;
 }
 
 .symptom-panel {
@@ -806,6 +807,10 @@ section {
 .faq-list {
   margin-top: 1.5rem;
   border-top: 1px solid var(--line);
+}
+
+#b2b {
+  scroll-margin-top: calc(var(--header-h) + 0.75rem);
 }
 
 .faq-item {
@@ -1229,40 +1234,29 @@ section {
   }
 
   .hero-visual {
-    position: absolute;
-    top: 0;
-    right: 0;
-    width: min(210px, 32vw);
-    margin: 0;
-    pointer-events: none;
+    position: static;
+    width: 100%;
+    max-width: 520px;
+    margin: 1.6rem 0 0;
   }
 
   .hero-copy {
-    padding-right: min(230px, 36vw);
+    padding-right: 0;
   }
 
-  .hero-chip {
-    left: 6%;
-    bottom: 8%;
-    padding: 0.5rem 0.65rem 0.45rem;
-  }
-
-  .hero-chip span {
-    font-size: 0.62rem;
-  }
-
-  .hero-chip strong {
-    font-size: 1.2rem;
+  .hero-photo {
+    aspect-ratio: 16 / 10;
+    max-height: 320px;
   }
 }
 
 @media (max-width: 640px) {
   .hero-visual {
-    display: none;
+    margin-top: 1.25rem;
   }
 
-  .hero-copy {
-    padding-right: 0;
+  .hero-photo {
+    max-height: 240px;
   }
 }
 

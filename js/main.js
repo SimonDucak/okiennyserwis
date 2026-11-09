@@ -97,3 +97,18 @@ faqItems.forEach((item) => {
     });
   });
 });
+
+function openB2B() {
+  const item = document.getElementById("b2b");
+  if (item) item.open = true;
+}
+
+document.querySelectorAll('a[href="#b2b"]').forEach((link) => {
+  link.addEventListener("click", openB2B);
+});
+
+window.addEventListener("hashchange", () => {
+  if (location.hash === "#b2b") openB2B();
+});
+
+if (location.hash === "#b2b") openB2B();
