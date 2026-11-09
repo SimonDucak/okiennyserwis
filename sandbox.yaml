@@ -1,0 +1,7 @@
+version: 1
+web:
+  command: "exec python3 -m http.server 3000 --bind 0.0.0.0 --directory ."
+  port: 3000
+  health_path: "/"
+build:
+  command: ""
